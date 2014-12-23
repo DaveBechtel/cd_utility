@@ -1,0 +1,85 @@
+<%= form_for(@record) do |f| %>
+  <% if @record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@record.errors.count, "error") %> prohibited this record from being saved:</h2>
+
+      <ul>
+      <% @record.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :co2_usage %><br>
+    <%= f.number_field :co2_usage %>
+  </div>
+  <div class="field">
+    <%= f.label :kv_usage %><br>
+    <%= f.number_field :kv_usage %>
+  </div>
+  <div class="field">
+    <%= f.label :kw_usage %><br>
+    <%= f.number_field :kw_usage %>
+  </div>
+  <div class="field">
+    <%= f.label :gas_usage %><br>
+    <%= f.number_field :gas_usage %>
+  </div>
+  <div class="field">
+    <%= f.label :gen_usage %><br>
+    <%= f.number_field :gen_usage %>
+  </div>
+  <div class="field">
+    <%= f.label :sanitary_discharge %><br>
+    <%= f.number_field :sanitary_discharge %>
+  </div>
+  <div class="field">
+    <%= f.label :sewage_discharge %><br>
+    <%= f.number_field :sewage_discharge %>
+  </div>
+  <div class="field">
+    <%= f.label :water_usage %><br>
+    <%= f.number_field :water_usage %>
+  </div>
+  <div class="field">
+    <%= f.label :co2_reading %><br>
+    <%= f.number_field :co2_reading %>
+  </div>
+  <div class="field">
+    <%= f.label :kv_reading %><br>
+    <%= f.number_field :kv_reading %>
+  </div>
+  <div class="field">
+    <%= f.label :kw_reading %><br>
+    <%= f.number_field :kw_reading %>
+  </div>
+  <div class="field">
+    <%= f.label :gas_reading %><br>
+    <%= f.number_field :gas_reading %>
+  </div>
+  <div class="field">
+    <%= f.label :gen_reading %><br>
+    <%= f.number_field :gen_reading %>
+  </div>
+  <div class="field">
+    <%= f.label :water_reading %><br>
+    <%= f.number_field :water_reading %>
+  </div>
+  <div class="field">
+    <%= f.label :sanitary_reading %><br>
+    <%= f.text_field :sanitary_reading %>
+  </div>
+  <div class="field">
+    <%= f.label :gas_mmbtu %><br>
+    <%= f.number_field :gas_mmbtu %>
+  </div>
+  <div class="field">
+    <%= f.label :gen_mmbtu %><br>
+    <%= f.number_field :gen_mmbtu %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

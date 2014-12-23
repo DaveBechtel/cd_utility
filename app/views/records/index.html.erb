@@ -1,0 +1,59 @@
+<h1>Listing records</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Co2 usage</th>
+      <th>Kv usage</th>
+      <th>Kw usage</th>
+      <th>Gas usage</th>
+      <th>Gen usage</th>
+      <th>Sanitary discharge</th>
+      <th>Sewage discharge</th>
+      <th>Water usage</th>
+      <th>Co2 reading</th>
+      <th>Kv reading</th>
+      <th>Kw reading</th>
+      <th>Gas reading</th>
+      <th>Gen reading</th>
+      <th>Water reading</th>
+      <th>Sanitary reading</th>
+      <th>Gas mmbtu</th>
+      <th>Gen mmbtu</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @records.each do |record| %>
+      <tr>
+        <td><%= record.co2_usage %></td>
+        <td><%= record.kv_usage %></td>
+        <td><%= record.kw_usage %></td>
+        <td><%= record.gas_usage %></td>
+        <td><%= record.gen_usage %></td>
+        <td><%= record.sanitary_discharge %></td>
+        <td><%= record.sewage_discharge %></td>
+        <td><%= record.water_usage %></td>
+        <td><%= record.co2_reading %></td>
+        <td><%= record.kv_reading %></td>
+        <td><%= record.kw_reading %></td>
+        <td><%= record.gas_reading %></td>
+        <td><%= record.gen_reading %></td>
+        <td><%= record.water_reading %></td>
+        <td><%= record.sanitary_reading %></td>
+        <td><%= record.gas_mmbtu %></td>
+        <td><%= record.gen_mmbtu %></td>
+        <td><%= link_to 'Show', record %></td>
+        <td><%= link_to 'Edit', edit_record_path(record) %></td>
+        <td><%= link_to 'Destroy', record, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Record', new_record_path %>
